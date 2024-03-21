@@ -18,7 +18,7 @@ import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
 @RequiresApi(Build.VERSION_CODES.O)
-class KeyStoreHelper(context: Context) {
+class KeyStoreHelper(private val pref: SharedPreferencesHelper) {
     private val TAG = this.javaClass.canonicalName
 
     private val KEYSTORE_PROVIDER = "AndroidKeyStore"
@@ -27,8 +27,6 @@ class KeyStoreHelper(context: Context) {
 
     private val AES_MODE = "AES/GCM/NoPadding"
     private val RSA_MODE = "RSA/ECB/PKCS1Padding"
-
-    private val pref = SharedPreferencesHelper(context)
 
     init {
         //加載 KeyStore，參數通常為 null，表示沒有密碼。在 Android 中對於 AndroidKeyStore，通常情況下不需要密碼。

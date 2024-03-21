@@ -7,12 +7,43 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvAfter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="After"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvAfterTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvAfterTitle" />
+
+    <TextView
+        android:id="@+id/tvBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Before"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/tvBeforeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvBeforeTitle" />
+
+    <TextView
+        android:id="@+id/tvBeforeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Before:"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAfterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="After:"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/tvBeforeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvBefore" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
